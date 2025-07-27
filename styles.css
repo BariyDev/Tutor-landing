@@ -196,3 +196,45 @@ section:not(:last-of-type){
 .about ul li{
     margin-bottom: 0.1rem;
 }
+/* study section*/
+.study {
+    display: flex;
+    padding: calc(var(--navHeight)*0.5);
+    flex-direction: column;
+    
+
+}
+
+.studyPhotoContainer {
+    display: flex;
+    flex-direction: row ;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.studyPhotoContainer:not(:first-of-type){ 
+    margin-top: -10%; 
+}
+
+.studyPhotoContainer:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+.studyPhoto{
+    width: 40%;
+    border-radius: 20px;
+
+}
+.studyPhotoDescriptionMsg{
+    background-color: #8ac5c5;
+    width: 40%;
+    
+}
+.studyPhotoContainer:nth-child(odd) .studyPhotoDescriptionMsg {
+    left: 30px;
+}
+
+.studyPhotoContainer:nth-child(even) .studyPhotoDescriptionMsg {
+    right: 30px;
+}
