@@ -238,3 +238,50 @@ section:not(:last-of-type){
 .studyPhotoContainer:nth-child(even) .studyPhotoDescriptionMsg {
     right: 30px;
 }
+
+/* questions section*/
+.questions {
+    height: min(100vh, 1440px);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.faq-list {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    padding: 0.5rem;
+    max-width: 900px; 
+}
+.faq-item {
+    cursor: pointer;
+    padding: 0.7rem;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #8ac5c5;
+}
+.question {
+  font-weight: bold;
+  transition: background-color 0.4s;
+
+}
+.faq-item:hover {
+  background-color: #E5D9C8 ;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  
+}
+.answer.active {
+  max-height: 500px;
+
+}
+.faq-item.active {
+    background-color: #E5D9C8 
+}
+
