@@ -330,3 +330,131 @@ footer p a{
 }
 
 
+/* media queries */
+
+@media (min-width: 577px) and (max-width: 991px) {
+.main {
+    min-height: 100vh;
+}
+.profilePicture{
+    height: 40vh;
+}
+.ratsPicture {
+    height: 30vh;
+}
+.main-secondMsg {
+    width: 90%;
+}
+
+}
+
+@media (max-width: 576px) {
+
+.profilePicture{
+    height: initial;
+    width: 100%;
+}
+.main {
+    align-items: center;
+    padding: var(--navHeight);
+    padding-top: calc(var(--navHeight)*2);
+}
+.main-topContainer{
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    align-items: flex-end;
+    justify-content: center;
+    
+}
+.messages-container{
+    width: 90%;
+    order: 1
+}
+.main-firstMsg{
+    top: -40px;
+    left: 0;
+   
+}
+.main-secondMsg {
+    width: 60%;
+    top: -20px;
+    left: 0px;
+}
+.main-bottomContainer{
+    gap: 0;
+    flex-flow: column;
+
+}
+.ratsPicture {
+       height: initial;
+    width: 50%;
+    order: 1;
+   
+}
+.aboutMsg {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.aboutMsg::before{
+    background-image:   url(images/arrowRotated.png);
+    background-position:  
+    right 0 bottom 0;
+    bottom: -120px;
+    right: 0;
+    left: initial;
+    background-size: 100px;
+   
+}
+.study {
+    padding: var(--navHeight);
+    gap: 3rem;
+
+}
+.studyPhotoContainer:not(:first-of-type){ 
+    margin-top: initial; 
+}
+.studyPhotoContainer {
+    width: 100%;
+    position: relative;
+}
+
+.studyPhoto{
+    width: 100%;
+
+}
+.studyPhotoDescriptionMsg{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  
+}
+.studyPhotoContainer:nth-child(odd) .studyPhotoDescriptionMsg {
+    left: initial;
+}
+
+.studyPhotoContainer:nth-child(even) .studyPhotoDescriptionMsg {
+    right: initial;
+}
+
+.nav-item {
+    font-size: 1rem;
+}
+
+}
+
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+.nav-item {
+    font-size: 0.85rem;
+}
+
+}
+
+@media (max-width: 380px) {
+.nav-item {
+    font-size: 0.75rem;
+}
+}
+
+
