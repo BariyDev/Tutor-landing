@@ -285,3 +285,48 @@ section:not(:last-of-type){
     background-color: #E5D9C8 
 }
 
+/* contacts section */
+.contacts {
+    height: min(calc(100vh - var(--navHeight) + 0.2rem), 1440px);
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: end;
+    border-top: 0.2rem solid black;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    height: calc(var(--navHeight)*2);
+    padding:  calc(var(--navHeight)*0.2) ;
+}
+.iconsContainer{
+    display: flex;
+    height: 100%;
+    gap:  calc(var(--navHeight)*0.5);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.icon {
+    width: calc(var(--navHeight)*1.5);
+    fill: #8ac5c5;
+}
+.githubIcon {
+    width: 0.8rem;
+    fill: rgb(255, 0, 98);
+}
+footer p{
+    font-size: 0.8rem;
+}
+footer p a{
+    color: rgb(255, 0, 98)
+}
+
+
