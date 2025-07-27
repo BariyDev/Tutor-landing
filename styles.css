@@ -42,6 +42,42 @@ ul {
     list-style: none;
     
 }
+section {
+    width: 100%;
+    max-width: 1400px;
+    border: 0.2rem solid black;
+    background-color: #ffffff;
+    background-image:   url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="1" fill="black"/></svg>');
+    background-size:  30px 30px;
+    background-position:  
+    center;
+    background-repeat:  repeat;
+    scroll-margin-top: calc(var(--navHeight) - 0.2rem);
+
+}
+section:not(:last-of-type){
+    margin-bottom: 1rem;
+    
+}
+.shadow {
+    box-shadow: -5px 5px 100px 1px #669999;
+}
+
+.handwrittenText {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5rem;
+    color: #669999;
+}
+.message  {
+    padding: 1rem;
+    border-radius: 20px;
+    position: relative;
+    
+}
+
 
 /* Navigation*/
 .fixed-nav{
@@ -69,4 +105,94 @@ ul {
 }
 .nav-item a:hover{
     color:#8ac5c5;
+}
+/* main section*/
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: -2;
+    padding: calc(var(--navHeight)*0.5);
+    padding-top: calc(var(--navHeight)*1.5);
+    
+}
+.main-topContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.messages-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.main-firstMsg{
+    background-color: #8ac5c5;
+    width: 100%;
+    left: 20px;
+
+}
+.main-secondMsg {
+    background-color: #669999;
+    width: 60%;
+    top: 20px;
+    left: 40px;
+
+}
+.profilePicture{
+    height: 50vh;
+    max-height: 700px;
+    border-radius: 20px;
+}
+.main-bottomContainer{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem
+
+}
+.ratsPicture {
+    height: 40vh;
+    max-height: 600px;
+    filter: drop-shadow(5px 5px 20px rgba(0, 0, 0, 0.7));
+}
+.aboutMsg {
+    width: 65%;
+    background-color: #8ac5c5;
+    margin-bottom: 80px;
+    margin-top: 4rem;
+   
+}
+.aboutMsg::before{
+    background-image:   url(images/arrow.png);
+    background-position:  
+    left 0 bottom 0;
+    content: "";
+    background-repeat:  no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: -80px;
+    left: -10px;
+    z-index: -1;
+}
+.aboutMsg::after{
+    content: "Обо мне";
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 4rem;
+    color: #669999;
+    position: absolute;
+    top: -4rem;
+    left: -1rem;
+}
+.about ul li{
+    margin-bottom: 0.1rem;
 }
